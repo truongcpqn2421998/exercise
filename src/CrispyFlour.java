@@ -28,12 +28,12 @@ public class CrispyFlour extends Material implements Discount{
     @Override
     public double getRealMoney() {
         LocalDate nowDay=LocalDate.now();
-        if(getExpiryDate().isAfter(nowDay.plusMonths(4))||getExpiryDate().isEqual(nowDay.plusMonths(4))){
-            return getAmount()*20/100;
-        }else if(getExpiryDate().isAfter(nowDay.plusMonths(2))||getExpiryDate().isEqual(nowDay.plusMonths(2))) {
-            return getAmount()*40/100;
+        if(getExpiryDate().isAfter(nowDay.plusMonths(2))||getExpiryDate().isEqual(nowDay.plusMonths(2))){
+            return getAmount()*60/100;
+        }else if(getExpiryDate().isAfter(nowDay.plusMonths(4))||getExpiryDate().isEqual(nowDay.plusMonths(4))) {
+            return getAmount()*80/100;
         }else {
-            return getAmount()*5/100;
+            return getAmount()*95/100;
         }
     }
 }

@@ -28,12 +28,12 @@ public class Meat extends Material implements Discount{
     @Override
     public double getRealMoney() {
         LocalDate nowDay=LocalDate.now();
-        if(getExpiryDate().isAfter(nowDay.plusDays(5))||getExpiryDate().isEqual(nowDay.plusDays(5))){
-            return getAmount()*30/100;
-        }else if(getExpiryDate().isAfter(nowDay.plusDays(3))||getExpiryDate().isEqual(nowDay.plusDays(3))) {
+        if(getExpiryDate().isAfter(nowDay.plusDays(3))||getExpiryDate().isEqual(nowDay.plusDays(3))){
             return getAmount()*50/100;
+        }else if(getExpiryDate().isAfter(nowDay.plusDays(5))||getExpiryDate().isEqual(nowDay.plusDays(5))) {
+            return getAmount()*70/100;
         }else {
-            return getAmount()*10/100;
+            return getAmount()*90/100;
         }
     }
 }

@@ -16,6 +16,9 @@ public class MaterialManage {
     public void addMaterial(Material material){
         materialList.add(material);
     }
+    public void moveMaterial(Material material){
+        materialList.remove(material);
+    }
 
     public void difference(Material material){
         System.out.println("the actual price of "+material.getName()+ " is:"+material.getAmount());
